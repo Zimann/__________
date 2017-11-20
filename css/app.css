@@ -1,0 +1,311 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background-color: gray;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+img,svg {
+    display: block;
+}
+
+
+.main-container {
+    margin-top: 80px;
+    background-color: #FFFFFF;
+    min-height: 800px;
+}
+#brain-circles .brain-skull {
+    margin-top: 100px;
+    margin-left: 200px;
+    position: relative;
+    width: 314px;
+    height: 390px;
+}
+#brain-circles .brain-skull img {
+    position: relative;
+    z-index: 3;
+}
+
+#brain-circles .circle-holder {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+    width: 90px;
+    height: 90px;
+    top: 128px;
+    right: 78px;
+}
+
+#brain-circles .brain-skull .white-circle:nth-child(2) {
+    left: 15px;
+}
+#brain-circles .brain-skull .white-circle:first-child {
+    left: 30px;
+}
+#brain-circles .brain-skull .white-circle {
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    transition: opacity 0.6s ease;
+    position: absolute;
+    opacity: 0;
+}
+
+#girl-boy {
+    margin-top: 100px;
+    padding-left: 140px;
+}
+
+.girl-graph-container, .boy-graph-container {
+    width: 280px;
+    height: 580px;
+    margin-top: 60px;
+/*    display:inline-flex;*/
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+.switch-container .desc {
+    height: 34px;
+    line-height: 34px;
+    color: #A70063;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+/*
+
+.girl-graph-container .pink-head {
+    background: url(../images/Arrow-head-stroke-magenta.svg) no-repeat center center transparent;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    transform: rotate(180deg);
+    opacity: 0;
+    top: 450px;
+}
+
+.arrow-top.pink-head {
+    opacity: 1;
+}
+
+#arrow-head-1 {
+    transition: top 1.485s linear, left 1.1s linear;
+    left: 100px;
+}
+#arrow-head-4 {
+    transition: top 1.485s linear, left 1.1s linear;
+    left: 138px;
+}
+
+#arrow-head-2 {
+    left: 108px;
+    transition: top 1.525s linear, left 1.1s linear;
+}
+#arrow-head-3 {
+    left: 130px;
+    transition: top 1.525s linear, left 1.1s linear;
+}
+
+
+.arrow-top#arrow-head-1 {
+    top: 282px;
+    left: 65px;
+}
+.arrow-top#arrow-head-2 {
+    top: 234px;
+    left: 94px;
+}
+.arrow-top#arrow-head-3 {
+    top: 234px;
+    left: 142px;
+}
+.arrow-top#arrow-head-4 {
+    top: 282px;
+    left: 171px;
+}
+.girl-graph-container #arrow-head-blue-center {
+    background: url(../images/Arrow-head-stroke.svg) no-repeat center center transparent;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 90px;
+    right: 54%;
+    !*transition: all 1.62s linear;*!
+}
+.animate #arrow-head-blue-center {
+    transform: translateY(350px);
+}
+
+.girl-graph-container #circle-blur-1,
+.girl-graph-container #circle-blur-2,
+.girl-graph-container #circle-blur-3,
+.girl-graph-container #circle-blur-4,
+.girl-graph-container #circle-blur-center {
+    opacity: 0;
+    transition: opacity 0.4s linear;
+}
+
+*/
+
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #A70063;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #A70063;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #A70063;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*---SVG CSS--- */
+
+
+  .arrow-heads, .arrow-heads-boy {
+    visibility : hidden;
+      transition: none;
+  }
+
+.arrow-body, .arrow-body-boy {
+    opacity: 0;
+}
+
+  #blue-arrow-body, #blue-arrow-body-boy {
+    opacity:0;
+  }
+
+  #blue-arrow-tip, #blue-arrow-tip-boy {
+    opacity: 0;
+  }
+
+
+  #speech-bubble-gnrh, #circle-blur-center, #speech-bubble-follicle, #speech-bubble-luteinizing, #speech_bubble-estrogen,
+#speech-bubble-gnrh-boy, #circle-blur-center-boy, #speech-bubble-follicle-boy, #speech-bubble-luteinizing-boy, #speech_bubble-testosterone-boy
+{
+    opacity: 0;
+    transition:all .5s;
+  }
+
+  #speech_bubble-estrogen, #speech_bubble-testosterone-boy {
+    transition-delay: 5s;
+  }
+
+  #speech-bubble-follicle, #speech-bubble-luteinizing,
+ #speech-bubble-follicle-boy, #speech-bubble-luteinizing-boy
+{
+    transition-delay: .6s;
+  }
+
+  .small-red-circle, .small-red-circle-boy {
+    opacity:0;
+    transition: .5s;
+
+
+  }
+
+  #slider {
+    width:420px;
+    margin:20px auto;
+  }
+
+/*--- Boy SVG CSS -- */
+
+.boy {
+opacity : 0;
+
+
+}
+
